@@ -1,0 +1,35 @@
+---
+title: "visual_pracitice"
+output: html_document
+---
+
+```{r, echo=FALSE}
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(knitr)
+```
+
+
+```{r Forloop_plots, comment="", echo=FALSE}
+iris_summary <- iris %>% gather(key,val,Sepal.Length,Sepal.Width,Petal.Length,Petal.Width) %>% group_by(key) %>% 
+  summarise(max_v = max(val), mean_v = mean(val), sd_v = sd(val)) 
+iris_mean <- iris %>% gather(key,val,Sepal.Length,Sepal.Width,Petal.Length,Petal.Width) %>% group_by(Species,key) %>%
+  summarise(mean_v = mean(val))
+
+for(i in 1:dim(iris_summary)[1]){
+  print(paste("Species", iris_summary[i,1], sep = " vs."))
+  iris_mean_key <- iris_mean %>% filter(key == as.character(iris_summary[i,1])) %>% as.data.frame()
+  gg<-ggplot(iris,aes_string(x="Species",y=as.character(iris_summary[i,1])))
+  print(gg+geom_point()+geom_point(data=iris_mean_key,aes_string(x="Species",y="mean_v"),color="red",size=5)+
+          coord_cartesian(ylim=c(as.numeric(iris_summary[grep(as.character(iris_summary[i,1]),iris_summary$key),3])-
+                                   as.numeric(5*iris_summary[grep(as.character(iris_summary[i,1]),iris_summary$key),4]),
+                                 as.numeric(iris_summary[grep(as.character(iris_summary[i,1]),iris_summary$key),3])+
+                                   as.numeric(5*iris_summary[grep(as.character(iris_summary[i,1]),iris_summary$key),4]))))
+}
+
+
+```
+
+
+

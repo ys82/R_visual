@@ -1,0 +1,6 @@
+"0","iris_summary <- iris %>% gather(key,val,Sepal.Length,Sepal.Width,Petal.Length,Petal.Width) %>% group_by(key) %>% 
+  summarise(max_v = max(val), mean_v = mean(val), sd_v = sd(val)) 
+"
+"2","Error in iris %>% gather(key, val, Sepal.Length, Sepal.Width, Petal.Length,  : 
+  could not find function ""%>%""
+"

@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1549122585683.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "C939E7AF",
+    "lastKnownWriteTime" : 1550982394,
+    "last_content_update" : 1550982394224,
+    "path" : "~/visual_practice/visual_practice.R",
+    "project_path" : "visual_practice.R",
+    "properties" : {
+        "cursorPosition" : "5,17",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
