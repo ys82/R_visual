@@ -9,6 +9,13 @@ library(dplyr)
 library(tidyr)
 library(knitr)
 ```
+##Visualization practice
+> This is the visualization practice with basic data.
+
+* data
+    * iris
+* axis
+    * x-axis is 'Species and y-axis are `Sepal.Length`,`Sepal.Width`, `Petal.Length`, `Petal.Width`
 
 
 ```{r Forloop_plots, comment="", echo=FALSE}

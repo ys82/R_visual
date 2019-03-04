@@ -1,1 +1,0 @@
-{"frames":[],"message":"Error in iris %>% gather(key, val, Sepal.Length, Sepal.Width, Petal.Length,  : \n  could not find function \"%>%\"\n"}
